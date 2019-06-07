@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+
+# folder to ignore
+venv
+sanitizer.egg-info
+build
+dist
