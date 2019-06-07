@@ -12,19 +12,18 @@ python setup.py install
 After that, you will be available to use the module in command line:
 
 ```bash
-sanitizer <path to your input file> <path to your output file> 
+sanitizer <path to your input file> <path to your output file>
 ```
 
 Some options are avalaible:
 
 Options:
 
-* **--verbose**
-* **--n_most_common** INTEGER:  Number of most common words to keep
 *   **--sanitizemethod**: Which sanitization method to apply to the dataset. For the moment, 3 methods are available:
   * *sanitize_hard* (remove numbers and punctuation except dashes, unify whitespaces, lowercase)
   * *sanitize_numbers* (remove punctuation except dashes, replace numbers with **N**)
-  * *sanitize_numbers_limit_commonwords* ( unify whitespaces, replace numbers with **N**, keep n most common words and replace other with **\<unk\>**)
+  * *sanitize_numbers_limit_commonwords* ( unify whitespaces, replace numbers with **N**, keep n most common words and replace other with **\<unk\>**)  
+* **--n_most_common** INTEGER:  Only useful if you choose sanitize_numbers_limit_commonwords, specifiy the number of most common words to keep
 * **--verbose**: Only useful if you choose sanitize_numbers_limit_commonwords, it shows information about the reduction of the word dictionary
 *  **--help**: Help message
 
